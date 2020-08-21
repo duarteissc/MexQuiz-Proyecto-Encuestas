@@ -1,0 +1,25 @@
+/*.navbar-brand {
+    transition: 2s ease all;
+    transition: width 3s;
+    transition-delay: 1s;
+}
+
+.navbar-brand:hover{
+    transform: rotateY(180deg)
+}
+*/
+
+
+.grow:hover
+{
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+.triangle-topright {
+    width: 0;
+    height: 0;
+    border-top: 100px solid black;
+    border-left: 500px solid transparent;
+}

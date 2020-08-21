@@ -1,0 +1,21 @@
+.footer a {
+	color: #3d4958 !important;
+}
+
+.socialIcons {
+	font-size: 32px;
+	margin: 0px 10px;
+}
+
+@media (min-width: 0px) { /* xs */
+    .footer { font-size: 0.7rem; }
+}
+@media (min-width: 576px) { /* sm */
+    .footer { font-size: 0.8rem; }
+}
+@media (min-width: 768px) { /* md */
+    .footer { font-size: 0.85rem; }
+}
+@media (min-width: 992px) { /* lg */
+    .footer { font-size: 1rem; }
+}

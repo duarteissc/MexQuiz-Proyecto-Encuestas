@@ -1,0 +1,98 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="avatar.png">-->
+    <link rel="apple-touch-icon" sizes="57x57" href="dist/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="dist/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="dist/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="dist/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="dist/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="dist/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="dist/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="dist/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="dist/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="dist/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="dist/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="dist/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="dist/favicon/favicon-16x16.png">
+    <link rel="manifest" href="dist/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>MxQuiz | Registro</title>
+
+    <link href="dist/css/icomoon 2/style.css" rel="stylesheet" />
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="dist/js/alertifyjs/css/alertify.css" rel="stylesheet" />
+    <link href="dist/js/alertifyjs/css/themes/bootstrap.css" rel="stylesheet" />
+    <script src="dist/js/alertifyjs/alertify.js"></script>
+
+    <link href="dist/css/signin.css" rel="stylesheet" />
+    <script src="dist/js/sha256.js"></script>
+    <script src="dist/js/jquery-3.3.1.min.js"></script>
+    <script src="dist/js/Est-Muni/select_estados.js"></script>
+    <script src="dist/js/Est-Muni/municipios.js"></script>
+</head>
+<body style="background-image:url(dist/fondo.jpg); height: 100%;
+  background-color: #333;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+">
+    <div class="container">
+        <form class="form-signin">
+            <h2 class="form-signin-heading">Registro</h2>
+
+            <label>Nombre</label>
+            <input type="text" id="txtName" class="form-control" placeholder="Nombre">
+            <label>Apellido Paterno</label>
+            <input type="text" id="txtApellidoP" class="form-control" placeholder="Apellido Paterno">
+            <label>Apellido Materno</label>
+            <input type="text" id="txtApellidoM" class="form-control" placeholder="Apellido Materno">
+            <label>Fecha de Nacimiento</label>
+            <input type="date" id="txtFecha" class="form-control" placeholder="Fecha de Nacimiento">
+            <label>Sexo</label>
+            <br />
+            <select class="form-control" id="Genero">
+                <option value="" disabled selected>Seleccione su Genero</option>
+            </select>
+            <br />
+            <label for="estado">Estado</label>
+            <br />
+            <select class="form-control" id="estado" name="estado">
+                <option value="" disabled selected>Seleccione su Estado</option>
+            </select>
+            <br />
+            <label for="municipio">Municipio</label>
+            <br />
+            <select class="form-control" id="municipio" name="municipio"></select>
+            <br />
+
+
+            <label>Correo</label>
+            <input id="txtEmail" type="text" class="form-control" placeholder="Correo Electronico">
+
+            <label>User</label>
+            <input type="text" id="txtNick" class="form-control" placeholder="Nombre de Usuario">
+            <label>Password</label>
+            <input type="password" id="txtPassword" class="form-control" placeholder="Password">
+
+            
+                <button type="button" class="form-control" id="btnRegistro" value="Registrar"
+                        style="background:#3a7999;color:white;" >
+                    Registrar
+                </button>
+        </form>
+
+    </div>
+    <script src="dist/js/jquery-3.3.1.min.js"></script>
+    <script src="dist/js/sha256.js"></script>
+    <script src="dist/js/Registro.js"></script>
+</body>
+</html>

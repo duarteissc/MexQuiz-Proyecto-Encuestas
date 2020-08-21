@@ -1,0 +1,141 @@
+@charset "UTF-8";
+/* CSS Document */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+body{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 17px;
+    padding-top: 55px;
+}
+
+.container-fluid{
+    font-family: 'Ramaraja', serif;
+}
+header{
+    border: 0.5px solid #6c757d;
+    background: #ffffff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.menu{
+    width: 90%;
+    max-width: 600px;
+    margin:auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.menu .logo{
+    display: inline-block;
+    margin-right: 1em;
+    //height: 50px;
+}
+
+.menu .logo img{
+    vertical-align: top;
+
+
+}
+
+.menu .btn-menu{
+    display: none;
+    color: #040505;
+    text-decoration: none;
+    font-size: 1em;
+    top: 100%;
+}
+
+.menu .enlaces{
+    display: inline-block;
+    text-align: right;
+}
+
+.menu .enlaces a {
+    color: #040505;
+    text-decoration: none;
+    display: inline-block;
+    padding: 1em;
+    text-align: center;
+    font-size: 1em;
+}
+
+.menu .enlaces i{
+    margin-right: 5px;
+}
+
+/*.menu .enlaces a:hover{
+    background: #0b2e13;
+    color: #4357ad;
+
+}*/
+
+/*Efectos de menu*/
+.headroom{
+    transition: transform .3s ease;
+}
+
+.headroom--pinned{
+     transform: translateY(0%);
+ }
+/*Mostrar el menú cuando subamos */
+.headroom--unpinned{
+    transform: translateY(-100%);
+}
+
+@media screen and (max-width:700px){
+    header .menu{
+        flex-direction: column;
+    }
+
+    header .menu .logo{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding: 1em;
+    }
+    header .menu .logo .btn-menu{
+        display: inline-block;
+    }
+    header .menu .enlaces{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+
+
+main {
+    width: 90%;
+    max-width:1000px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.75);
+
+}
+main article h1 {
+    font-weight: normal;
+    margin-bottom: .5em;
+}
+main article hr {
+    margin-bottom: 1em;
+    height: 2px;
+    background: #4357ad;
+    border: none;
+}
+main article p {
+    margin-bottom: 1em;
+
+;
+}

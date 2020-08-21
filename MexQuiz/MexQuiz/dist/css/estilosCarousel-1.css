@@ -1,0 +1,11 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+body {
+	font-family: 'Alegreya', serif;
+}

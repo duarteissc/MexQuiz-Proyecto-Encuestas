@@ -1,0 +1,153 @@
+﻿@charset "UTF-8";
+/* CSS Document */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+body{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 17px;
+    padding-top: 55px;
+}
+
+.container-fluid{
+    font-family: 'Ramaraja', serif;
+}
+header {
+    border: 0.5px solid #6c757d;
+    background: #ffffff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+
+.menu{
+    width: 90%;
+    max-width: 800px;
+    margin:auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.menu .logo{
+    display: inline-block;
+    margin-right: 1em;
+    //height: 50px;
+}
+
+.menu .logo img{
+    vertical-align: top;
+
+
+}
+
+.menu .btn-menu{
+    display: none;
+    color: #040505;
+    text-decoration: none;
+    font-size: 1em;
+    top: 100%;
+}
+
+.menu .enlaces{
+    display: inline-block;
+    text-align: left;
+}
+
+.menu .enlaces a {
+    color: #040505;
+    text-decoration: none;
+    display: inline-block;
+    padding: 1em;
+    text-align: center;
+    font-size: 1em;
+}
+
+.menu .enlaces i{
+    margin-right: 5px;
+}
+
+/*.menu .enlaces a:hover{
+    background: #0b2e13;
+    color: #4357ad;
+
+}*/
+
+/*Efectos de menu*/
+.headroom{
+    transition: transform .3s ease;
+}
+
+.headroom--pinned{
+     transform: translateY(0%);
+ }
+/*Mostrar el menú cuando subamos */
+.headroom--unpinned{
+    transform: translateY(-100%);
+}
+
+@media screen and (max-width:700px){
+    header .menu{
+        flex-direction: column;
+    }
+
+    header .menu .logo{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding: 1em;
+    }
+    header .menu .logo .btn-menu{
+        display: inline-block;
+    }
+    header .menu .enlaces{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+.divIndex{
+	border-top-width: medium;
+  border-right-width: medium;
+  border-bottom-width: medium;
+  border-left-width: medium;
+border-right-style: double;
+}
+
+.divMexico{
+	background-image:url(../img/mexico.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.contenedor{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+ 
+.texto-encima{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.centrado{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}

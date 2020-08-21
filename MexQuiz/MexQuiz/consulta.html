@@ -1,0 +1,171 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="dist/use/css/bootstrap.css" rel="stylesheet" />
+    <link href="dist/use/css/estilosBorde.css" rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link href="dist/use/css/bootstrap.css" rel="stylesheet" />
+    <link href="dist/use/css/estilos.css" rel="stylesheet" />
+    <link href="dist/use/css/efectos.css" rel="stylesheet" />
+    <link href="dist/use/css/mystyle.css" rel="stylesheet" />
+    <link href="dist/use/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ramaraja" rel="stylesheet">
+
+    <!--FAVICON -->
+    <link rel="apple-touch-icon" sizes="57x57" href="dist/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="dist/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="dist/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="dist/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="dist/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="dist/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="dist/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="dist/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="dist/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="dist/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="dist/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="dist/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="dist/favicon/favicon-16x16.png">
+    <link rel="manifest" href="dist/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="dist/js/jquery-3.3.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="dist/js/EncuestaAngular.js"></script>
+    <link href="dist/css/icomoon 2/style.css" rel="stylesheet" />
+
+
+    <link href="dist/js/alertifyjs/css/alertify.css" rel="stylesheet" />
+    <!-- include boostrap theme  -->
+    <link href="dist/js/alertifyjs/css/themes/bootstrap.css" rel="stylesheet" />
+    <!-- include alertify script -->
+    <script src="dist/js/alertifyjs/alertify.js"></script>
+    <script src="dist/js/renewSession.js"></script>
+    <!-- my Own CSS -->
+    <title>Consulta</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+
+<body>
+    <header id="header">
+        <!-- COMIENZA LA NAVBAR -->
+        <nav class="menu">
+            <div class="logo">
+                <div class="grow"><a class="navbar-brand" href="index.html"><img src="dist/favicon/logoMQ.png" width="145" height="45" class="mt-sm-1  pt-lg-8" alt="logoMQ"></a></div>
+                <ul><a href="index.html" class="btn-menu" id="btn-menu"><i class="icono fa fa-bars mt-3" aria-hidden="true"></i></a> </ul>
+            </div>
+
+            <div class="enlaces" id="enlaces">
+                <a class="dropdown " href="#">
+                    <i class="disable dropdown-toggle" href="#" onMouseover="this.style.color='DARKOLIVEGREEN'" onMouseout="this.style.color='black'" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Categorias
+                    </i>
+                    <i id="Menu" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    </i>
+                </a>
+                <a href="Search.html" onMouseover="this.style.color='DARKOLIVEGREEN'" onMouseout="this.style.color='black'"><i class="icon-search" aria-hidden="true"></i> Busqueda</a>
+                <a id="login" href="login.html" onMouseover="this.style.color='DARKOLIVEGREEN'" onMouseout="this.style.color='black'"><i class="icon-user" aria-hidden="true"></i> login</a>
+                <a id="Administrador" href="AdminHome.html" onMouseover="this.style.color='DARKOLIVEGREEN'" onMouseout="this.style.color='black'"><i class="icon-wrench" aria-hidden="true"></i> Admin</a>
+                <a id="btnLoginOut" onclick="CerrarSesion()" href="index.html" onMouseover="this.style.color='DARKOLIVEGREEN'" onMouseout="this.style.color='black'"><i class="icon-exit" aria-hidden="true"></i> Cerrar Sesión</a>
+            </div>
+        </nav>
+        <!-- TERMINA LA NAVBAR -->
+    </header>
+    <div ng-app="EncuestaApp" ng-controller="ControllerEncuesta">
+    </div>
+    <section class="container mt-5">
+        <div class="text-center mt-2" id="Encuestatitulo">
+        </div>
+
+        <div id="carouselExampleIndicators" class="carousel slide mt-2" data-ride="carousel">
+            <ol class="carousel-indicators" id="Menuli"></ol>
+            <div class="carousel-inner" id="MenuIMG">
+
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <div class="mt-4">
+            <h2>Iniciativa</h2>
+        </div>
+        <div class="mt-4" id="EncuestaDescripcion">
+
+        </div>
+        <div class="text-center">
+            <h3>Su Opinión</h3>
+        </div>
+        <div class="row mt-3 justify-content-center" id="EncuestaButtones">
+
+            <div class="modal fade" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title text-dark" align="left"> Gracias &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;</h4>
+                            <img src="dist/favicon/logoMQ.png" height="30" align="right">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body text-dark" align="justify">
+                            <label for="sel1">Su opinión ha sido enviada, gracias por participar en esta consulta</label>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section>
+            <!-- noticias 2 columnas TABLERO -->
+            <div class="container">
+                <div class="row mt-5">
+                    <div class="col-sm-12 col-md-6 col-lg-6 " style="width: 900px; height: 500px;" id="donutchart">
+                        
+                    </div>
+                    <div style="width: 800px; height: 500px;" class="col-sm-12 col-md-6 col-lg-6" id="columnchart_material">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <footer class="container-fluid" style="background: #d6d8d9">
+        <div class="row mt-3 pt-3">
+            <!-- Grid column -->
+            <div class="col-md-12 col-lg-12 col-sm-12">
+                <!--Copyright-->
+                <p class="text-center text-lg-center text-md-center text-sm-center text-center">
+                    © 2018 mexQuiz
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="dist/js/EncuestaAngular.js"></script>
+    <script src="dist/use/js/jquery-3.3.1.min.js"></script>
+    <script src="dist/use/js/headroom.js"></script>
+    <script src="dist/use/js/menu.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

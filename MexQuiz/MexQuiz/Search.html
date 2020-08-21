@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="avatar.png">-->
+    <link rel="apple-touch-icon" sizes="57x57" href="dist/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="dist/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="dist/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="dist/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="dist/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="dist/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="dist/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="dist/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="dist/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="dist/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="dist/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="dist/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="dist/favicon/favicon-16x16.png">
+    <link rel="manifest" href="dist/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>MexQuiz | Search</title>
+
+    <link href="dist/css/icomoon 2/style.css" rel="stylesheet" />
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="dist/js/alertifyjs/css/alertify.css" rel="stylesheet" />
+    <link href="dist/js/alertifyjs/css/themes/bootstrap.css" rel="stylesheet" />
+    <script src="dist/js/alertifyjs/alertify.js"></script>
+    <script src="dist/js/sha256.js"></script>
+    <script src="dist/js/jquery-3.3.1.min.js"></script>
+    <script src="dist/js/Search.js"></script>
+</head>
+<body>
+    <style>
+        .search-table {
+            padding: 10%;
+            margin-top: -6%;
+        }
+
+        .search-box {
+            background: #c1c1c1;
+            border: 1px solid #ababab;
+            padding: 3%;
+        }
+
+            .search-box input:focus {
+                box-shadow: none;
+                border: 2px solid #eeeeee;
+            }
+
+        .search-list {
+            background: #fff;
+            border: 1px solid #ababab;
+            border-top: none;
+        }
+
+            .search-list h3 {
+                background: #eee;
+                padding: 3%;
+                margin-bottom: 0%;
+            }
+    </style>
+    <!------ Include the above in your HEAD tag ---------->
+    <!--<div class="container search-table">
+         <div class="row">
+             <div class="col-md-3">
+                 <h5>Search All Fields</h5>
+             </div>
+             <div class="col-md-9">
+                 <input type="text" id="myInput">
+             </div>
+         </div>
+         <div class="container">
+             <div id="count">
+
+             </div>
+             <table class="table" id="myTable"></table>
+         </div>
+     </div>-->
+
+    <div class="row">
+        <div class="col-lg-12 mt-4" style="background-color:#EDEFF0">
+            <div class="p-2">
+                <div style="font-size:40px; margin:1px;" align="center">
+                    <div class="logo">
+                        <div class="grow"><a class="navbar-brand" href="index.html"><img src="dist/favicon/logoMQ.png" width="145" height="45" class="mt-sm-1  pt-lg-8" alt="logoMQ"></a></div>
+                        <ul><a href="index.html" class="btn-menu" id="btn-menu"><i class="icono fa fa-bars mt-3" aria-hidden="true"></i></a> </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                <form style=" height:50px">
+                    <div style="font-size:30px"><font face="Britannic Bold">Busqueda de encuestas</font></div>
+                </form>
+                <div class="row">
+                    <div class="col-lg-4 mt-4"></div>
+                    <div class="col-lg-4 mt-4">
+                        <input class="form-control" type="text" onkeyup="EncuestasNombre()" id="NombreSearch">
+                    </div>
+                </div>
+                <div id="count">
+
+                </div>
+
+                <table class="mt-2 table table-fixed">
+                    <thead>
+                        <tr>
+                            <th><div style="font-size:14px; background-color:#F2F2F2"><font face="Ariel">Id</font></div></th>
+                            <th><div style="font-size:14px; background-color:#F2F2F2"><font face="Arial">Nombre</font></div></th>
+                            <th><div style="font-size:14px; background-color:#F2F2F2"><font face="Arial">Imagen principal</font></div></th>
+                            <th><div style="font-size:14px; background-color:#F2F2F2"><font face="Arial">Enlace</font></div></th>
+                        </tr>
+                    </thead>
+                    <tbody id="myTable"></tbody>
+                </table>
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Descripcion</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body" id="BodyModal">
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="dist/js/jquery-3.3.1.min.js"></script>
+    <script src="dist/js/Search.js"></script>
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="dist/js/js/popper.min.js"></script>
+    <script src="dist/js/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="dist/js/alertifyjs/alertify.min.js"></script>
+</body>
+</html>

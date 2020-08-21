@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.Grafica1{
+    padding: 50px;
+}
+ .Estandar1{
+     margin-top: 20px;
+ }
+
+ .underline{
+
+     border-bottom: 5px solid #1b1e21;
+     display: inline-block;
+
+ }
